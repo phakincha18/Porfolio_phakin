@@ -10,6 +10,32 @@ var g=document.getElementById("glow");addEventListener("pointermove",function(e)
 
 /* Screenshot viewers + gallery */
 (function(){var D={
+ "inv": [
+  {
+   "t": "Login",
+   "s": "images/inventory-login.jpg"
+  },
+  {
+   "t": "Dashboard",
+   "s": "images/inventory-dashboard.jpg"
+  },
+  {
+   "t": "Add Asset",
+   "s": "images/inventory-add-form.jpg"
+  },
+  {
+   "t": "Asset List",
+   "s": "images/inventory-asset-list.jpg"
+  },
+  {
+   "t": "Reports",
+   "s": "images/inventory-report.jpg"
+  },
+  {
+   "t": "Edit History",
+   "s": "images/inventory-edit-log.jpg"
+  }
+ ],
  "cook": [
   {
    "t": "Landing",
@@ -57,7 +83,7 @@ var g=document.getElementById("glow");addEventListener("pointermove",function(e)
   }
  ]
 };
-var NM={cook:"ครัวเปิดตู้",port:"Digital Portfolio",thai:"Authentic Thai Cuisine"},rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var NM={inv:"ระบบครุภัณฑ์",cook:"ครัวเปิดตู้",port:"Digital Portfolio",thai:"Authentic Thai Cuisine"},rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 document.querySelectorAll(".shot").forEach(function(A){
 var k=A.dataset.k,S=D[k],T=document.querySelector('.thumbs[data-k="'+k+'"]'),C=A.querySelector(".cap"),im=[],bt=[],cur=0,tm;
 function show(n){cur=n;im.forEach(function(x,i){x.classList.toggle("on",i===n)});bt.forEach(function(x,i){x.classList.toggle("on",i===n)});C.textContent=S[n].t}
